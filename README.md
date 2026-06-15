@@ -173,16 +173,14 @@ For production, the provider should be replaced with an approved OCR or AI servi
 - Live AI extraction quality depends on image clarity and provider availability.
 - Font size, bold, placement, and full layout compliance are not validated.
 
-## Future Production Considerations
+## Future Improvements
 
-- Agency-approved hosting and network egress controls.
-- Authentication, authorization, and role-based access.
-- Audit logging that avoids storing sensitive label contents unnecessarily.
-- Formal document retention and deletion policy.
-- Security review, model risk review, accessibility review, and privacy review.
-- Monitoring, rate limiting, and incident response procedures.
-- Human-in-the-loop review workflows and integration with approved systems of record.
-- Batch processing with per-label review details and export.
+- Batch review queue for high-volume submissions, with per-label status and export.
+- Image quality screening for blurry, angled, dark, cropped, or glare-obscured labels before extraction, with unclear images routed for review or a clearer upload request.
+- Direct application intake from COLA or another approved system of record.
+- More detailed warning-statement readability and layout checks.
+- Human review queue that prioritizes failed and uncertain checks.
+- Agency-approved deployment path with authentication, audit logging, retention policy, rate limiting, and approved OCR/AI infrastructure.
 
 ## Trade-offs
 
